@@ -20,6 +20,7 @@ payload:
   - '+.scopus.com'
   - '+.science.com'
   - '+.elsevier.com'
+  - '+.sciencedirect.com'
   - '+.deepdyve.com'
   - '+.els-cdn'
   - '+.oup.com'
