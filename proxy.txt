@@ -8409,7 +8409,6 @@ payload:
   - '+.dogofcum.com'
   - '+.dogslife.ac.uk'
   - '+.dogspics.net'
-  - '+.doi.info'
   - '+.doitpoms.ac.uk'
   - '+.dojin-dl.com'
   - '+.dojin.com'
