@@ -241,9 +241,56 @@ function main(config) {
       ...groupBaseOption,
       "name": "节点选择",
       "type": "select",
-      "proxies": ["延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)"],
-      "include-all": true,
+      "proxies": ["🇸🇬 新加坡节点", "🇯🇵 日本节点", "🇺🇸 美国节点","延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)"],
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/adjust.svg"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🇹🇼 台湾节点",
+      "type": "url-test",
+      "include-all": true,
+      "filter": "(?i)台|台湾|TW|Taiwan",
+      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/tw.svg"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🇭🇰 香港节点",
+      "type": "url-test",
+      "include-all": true,
+      "filter": "(?i)港|香港|HK|Hong Kong",
+      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/hk.svg"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🇸🇬 新加坡节点",
+      "type": "url-test",
+      "include-all": true,
+      "filter": "(?i)新|新加坡|SG|Singapore",
+      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/sg.svg"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🇯🇵 日本节点",
+      "type": "url-test",
+      "include-all": true,
+      "filter": "(?i)日|日本|JP|Japan",
+      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/jp.svg"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🇺🇸 美国节点",
+      "type": "url-test",
+      "include-all": true,
+      "filter": "(?i)美|美国|US|United States",
+      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/flags/us.svg"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🌐 其他地区",
+      "type": "url-test",
+      "include-all": true,
+      "filter": "(?i)^(?!.*(台|台湾|TW|Taiwan|港|香港|HK|Hong Kong|新|新加坡|SG|Singapore|日|日本|JP|Japan|美|美国|US|United States|群组|自动跳转官网)).*$",
+      "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/globe.svg"
     },
     {
       ...groupBaseOption,
@@ -251,6 +298,7 @@ function main(config) {
       "type": "url-test",
       "tolerance": 100,
       "include-all": true,
+      "filter": "(?i)^(?!.*(群组|自动跳转官网)).*$",
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/speed.svg"
     },
     {
@@ -258,6 +306,7 @@ function main(config) {
       "name": "故障转移",
       "type": "fallback",
       "include-all": true,
+      "filter": "(?i)^(?!.*(群组|自动跳转官网)).*$",
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/ambulance.svg"
     },
     {
@@ -280,8 +329,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "谷歌服务",
       "type": "select",
-      "proxies": ["节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连"],
-      "include-all": true,
+      "proxies": ["节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连", "🇸🇬 新加坡节点", "🇯🇵 日本节点", "🇺🇸 美国节点", ],
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/google.svg"
     },
     {
@@ -289,7 +337,6 @@ function main(config) {
       "name": "国外媒体",
       "type": "select",
       "proxies": ["节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连"],
-      "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/youtube.svg"
     },
     {
@@ -297,7 +344,6 @@ function main(config) {
       "name": "电报消息",
       "type": "select",
       "proxies": ["节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连"],
-      "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/telegram.svg"
     },
     {
@@ -306,8 +352,7 @@ function main(config) {
       "expected-status": "200",
       "name": "ChatGPT",
       "type": "select",
-      "proxies": ["节点选择"],
-      "include-all": true,
+      "proxies": ["节点选择", "延迟选优", "故障转移","🇸🇬 新加坡节点", "🇯🇵 日本节点", "🇺🇸 美国节点", ],
       "filter": "AD|🇦🇩|AE|🇦🇪|AF|🇦🇫|AG|🇦🇬|AL|🇦🇱|AM|🇦🇲|AO|🇦🇴|AR|🇦🇷|AT|🇦🇹|AU|🇦🇺|AZ|🇦🇿|BA|🇧🇦|BB|🇧🇧|BD|🇧🇩|BE|🇧🇪|BF|🇧🇫|BG|🇧🇬|BH|🇧🇭|BI|🇧🇮|BJ|🇧🇯|BN|🇧🇳|BO|🇧🇴|BR|🇧🇷|BS|🇧🇸|BT|🇧🇹|BW|🇧🇼|BZ|🇧🇿|CA|🇨🇦|CD|🇨🇩|CF|🇨🇫|CG|🇨🇬|CH|🇨🇭|CI|🇨🇮|CL|🇨🇱|CM|🇨🇲|CO|🇨🇴|CR|🇨🇷|CV|🇨🇻|CY|🇨🇾|CZ|🇨🇿|DE|🇩🇪|DJ|🇩🇯|DK|🇩🇰|DM|🇩🇲|DO|🇩🇴|DZ|🇩🇿|EC|🇪🇨|EE|🇪🇪|EG|🇪🇬|ER|🇪🇷|ES|🇪🇸|ET|🇪🇹|FI|🇫🇮|FJ|🇫🇯|FM|🇫🇲|FR|🇫🇷|GA|🇬🇦|GB|🇬🇧|GD|🇬🇩|GE|🇬🇪|GH|🇬🇭|GM|🇬🇲|GN|🇬🇳|GQ|🇬🇶|GR|🇬🇷|GT|🇬🇹|GW|🇬🇼|GY|🇬🇾|HN|🇭🇳|HR|🇭🇷|HT|🇭🇹|HU|🇭🇺|ID|🇮🇩|IE|🇮🇪|IL|🇮🇱|IN|🇮🇳|IQ|🇮🇶|IS|🇮🇸|IT|🇮🇹|JM|🇯🇲|JO|🇯🇴|JP|🇯🇵|KE|🇰🇪|KG|🇰🇬|KH|🇰🇭|KI|🇰🇮|KM|🇰🇲|KN|🇰🇳|KR|🇰🇷|KW|🇰🇼|KZ|🇰🇿|LA|🇱🇦|LB|🇱🇧|LC|🇱🇨|LI|🇱🇮|LK|🇱🇰|LR|🇱🇷|LS|🇱🇸|LT|🇱🇹|LU|🇱🇺|LV|🇱🇻|LY|🇱🇾|MA|🇲🇦|MC|🇲🇨|MD|🇲🇩|ME|🇲🇪|MG|🇲🇬|MH|🇲🇭|MK|🇲🇰|ML|🇲🇱|MM|🇲🇲|MN|🇲🇳|MR|🇲🇷|MT|🇲🇹|MU|🇲🇺|MV|🇲🇻|MW|🇲🇼|MX|🇲🇽|MY|🇲🇾|MZ|🇲🇿|NA|🇳🇦|NE|🇳🇪|NG|🇳🇬|NI|🇳🇮|NL|🇳🇱|NO|🇳🇴|NP|🇳🇵|NR|🇳🇷|NZ|🇳🇿|OM|🇴🇲|PA|🇵🇦|PE|🇵🇪|PG|🇵🇬|PH|🇵🇭|PK|🇵🇰|PL|🇵🇱|PS|🇵🇸|PT|🇵🇹|PW|🇵🇼|PY|🇵🇾|QA|🇶🇦|RO|🇷🇴|RS|🇷🇸|RW|🇷🇼|SA|🇸🇦|SB|🇸🇧|SC|🇸🇨|SD|🇸🇩|SE|🇸🇪|SG|🇸🇬|SI|🇸🇮|SK|🇸🇰|SL|🇸🇱|SM|🇸🇲|SN|🇸🇳|SO|🇸🇴|SR|🇸🇷|SS|🇸🇸|ST|🇸🇹|SV|🇸🇻|SZ|🇸🇿|TD|🇹🇩|TG|🇹🇬|TH|🇹🇭|TJ|🇹🇯|TL|🇹🇱|TM|🇹🇲|TN|🇹🇳|TO|🇹🇴|TR|🇹🇷|TT|🇹🇹|TV|🇹🇻|TW|🇹🇼|TZ|🇹🇿|UA|🇺🇦|UG|🇺🇬|US|🇺🇸|UY|🇺🇾|UZ|🇺🇿|VA|🇻🇦|VC|🇻🇨|VN|🇻🇳|VU|🇻🇺|WS|🇼🇸|YE|🇾🇪|ZA|🇿🇦|ZM|🇿🇲|ZW|🇿🇼",
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/chatgpt.svg"
     },
@@ -316,23 +361,20 @@ function main(config) {
       "name": "微软服务",
       "type": "select",
       "proxies": ["全局直连", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)"],
-      "include-all": true,
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/microsoft.svg"
     },
     {
       ...groupBaseOption,
       "name": "学术网站",
       "type": "select",
-      "proxies": ["全局直连", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)"],
-      "include-all": true,
+      "proxies": ["全局直连", "节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "🇸🇬 新加坡节点", "🇯🇵 日本节点", "🇺🇸 美国节点", ],
       "icon": "https://github.com/int233/clash-rules/raw/refs/heads/main/icon/academy.svg"
     },
     {
       ...groupBaseOption,
       "name": "苹果服务",
       "type": "select",
-      "proxies": ["节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连"],
-      "include-all": true,
+      "proxies": ["节点选择", "延迟选优", "故障转移", "负载均衡(散列)", "负载均衡(轮询)", "全局直连", "🇸🇬 新加坡节点", "🇯🇵 日本节点", "🇺🇸 美国节点", ],
       "icon": "https://fastly.jsdelivr.net/gh/clash-verge-rev/clash-verge-rev.github.io@main/docs/assets/icons/apple.svg"
     },
     {
